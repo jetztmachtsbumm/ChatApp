@@ -23,7 +23,7 @@ namespace ChatApp
         {
             if (!client.Connected)
             {
-                client.Connect("127.0.0.1", 25565);
+                client.Connect("192.168.2.220", 25565);
 
                 packetReader = new PacketReader(client.GetStream());
 

@@ -85,7 +85,16 @@ namespace ChatApp
         private void SendBtn_Click(object sender, RoutedEventArgs e)
         {
             server.SendMessage(MessageTextBox.Text);
+            MessageTextBox.Text = "";
         }
 
+        private void MessageTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            (sender as TextBox).Text = (sender as TextBox).Text.Replace("$", "");
+            if(e.Key == Key.Enter && !string.IsNullOrEmpty((sender as TextBox).Text))
+            {
+                SendBtn_Click(null, null);
+            }
+        }
     }
 }

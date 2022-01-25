@@ -22,7 +22,7 @@
             <ListView x:Name="MsgView" Height="380"/>
             
             <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="MessageTextBox" Height="55" Width="545" VerticalContentAlignment="Center"/>
+                <TextBox KeyUp="MessageTextBox_KeyUp" x:Name="MessageTextBox" Height="55" Width="545" VerticalContentAlignment="Center"/>
                 <Button x:Name="SendBtn" Click="SendBtn_Click" Width="55" Content="Send"/>
             </StackPanel>
         </StackPanel>

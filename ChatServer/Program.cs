@@ -16,7 +16,7 @@ namespace ChatServer
         {
             users = new List<Client>();
 
-            listener = new TcpListener(IPAddress.Parse("127.0.0.1"), 25565);
+            listener = new TcpListener(IPAddress.Any, 25565);
             listener.Start();
 
             Console.WriteLine("Server started successfully!");
