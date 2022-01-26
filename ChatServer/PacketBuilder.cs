@@ -22,7 +22,7 @@ namespace ChatServer
         {
             int msgLength = msg.Length;
             ms.Write(BitConverter.GetBytes(msgLength));
-            ms.Write(Encoding.ASCII.GetBytes(msg));
+            ms.Write(Encoding.UTF8.GetBytes(msg));
         }
 
         public byte[] GetPacketBytes()
